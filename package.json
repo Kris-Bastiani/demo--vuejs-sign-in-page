@@ -2,7 +2,6 @@
 	"name": "test--frankie-financial",
 	"version": "0.1.0",
 	"description": "Technical test for Frankie Financial",
-	"main": "dist/index.html",
 	"scripts": {
 		"build": "parcel build src/*.pug",
 		"start": "parcel src/*.pug",
@@ -29,7 +28,7 @@
 		"eslint-plugin-react-hooks": "^2.5.1",
 		"eslint-plugin-security": "^1.4.0",
 		"jest": "^26.0.1",
-		"parcel-bundler": "^1.12.4",
+		"parcel": "^1.12.4",
 		"pug": "^2.0.4",
 		"sass": "^1.26.5",
 		"stylelint": "^13.5.0",
