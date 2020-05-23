@@ -1,1 +1,5 @@
-.mrg_l__sml { margin-left: 1rem !important; }
+$targets: ('bottom': 'b', 'left': 'l');
+
+@each $target, $abbr in $targets {
+	.mrg_#{$abbr}__sml { margin-#{$target}: 1rem !important; }
+}
