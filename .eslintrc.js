@@ -5,9 +5,8 @@ module.exports = {
 	},
 	extends: [
 		'airbnb-base',
-		'plugin:react/recommended',
+		'plugin:vue/recommended',
 		'plugin:security/recommended',
-		'react-app',
 	],
 	globals: {
 		afterEach: true,
