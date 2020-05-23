@@ -4,8 +4,8 @@
 	"description": "Technical test for Frankie Financial",
 	"main": "dist/index.html",
 	"scripts": {
-		"build": "parcel build src/index.pug",
-		"start": "parcel src/index.pug",
+		"build": "parcel build src/*.pug",
+		"start": "parcel src/*.pug",
 		"test": "jest"
 	},
 	"author": "Kris Bastiani <kris.bastiani@gmail.com>",
