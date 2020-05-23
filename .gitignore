@@ -1,0 +1,21 @@
+# IDE
+.vscode
+
+# Dependencies
+node_modules/
+
+# Logs
+logs
+*.log
+npm-debug.log*
+
+# Testing
+coverage/
+
+# Parcel cache and distribution folders
+.cache/
+dist/
+
+# Misc
+.DS_Store
+brief/

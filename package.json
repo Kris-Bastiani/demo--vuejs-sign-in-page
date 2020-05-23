@@ -1,0 +1,52 @@
+{
+	"name": "test--frankie-financial",
+	"version": "0.1.0",
+	"description": "Technical test for Frankie Financial",
+	"main": "dist/index.html",
+	"scripts": {
+		"build": "parcel build src/index.pug",
+		"start": "parcel src/index.pug",
+		"test": "jest"
+	},
+	"author": "Kris Bastiani <kris.bastiani@gmail.com>",
+	"license": "ISC",
+	"devDependencies": {
+		"@babel/core": "^7.9.6",
+		"@babel/plugin-transform-object-assign": "^7.8.3",
+		"@babel/preset-env": "^7.9.6",
+		"@typescript-eslint/eslint-plugin": "^2.34.0",
+		"@typescript-eslint/parser": "^2.34.0",
+		"babel-eslint": "^10.1.0",
+		"eslint": "^6.8.0",
+		"eslint-config-airbnb-base": "^14.1.0",
+		"eslint-config-react-app": "^5.2.1",
+		"eslint-plugin-flowtype": "^4.7.0",
+		"eslint-plugin-import": "^2.20.2",
+		"eslint-plugin-jest": "^23.13.1",
+		"eslint-plugin-jsx-a11y": "^6.2.3",
+		"eslint-plugin-react": "^7.20.0",
+		"eslint-plugin-react-hooks": "^2.5.1",
+		"eslint-plugin-security": "^1.4.0",
+		"jest": "^26.0.1",
+		"parcel-bundler": "^1.12.4",
+		"pug": "^2.0.4",
+		"typescript": "^3.9.3"
+	},
+	"dependencies": {
+		"axios": "^0.19.2"
+	},
+	"engines": {
+		"node": "^12.16.3"
+	},
+	"babel": {
+		"presets": [
+			"@babel/preset-env"
+		],
+		"plugins": [
+			"@babel/plugin-transform-object-assign"
+		]
+	},
+	"jest": {
+		"collectCoverage": true
+	}
+}
