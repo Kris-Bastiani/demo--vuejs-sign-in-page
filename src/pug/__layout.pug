@@ -5,5 +5,9 @@ html(lang='en')
 		include _head.pug
 		include _scripts.pug
 	body
+		noscript: .container.pad__sml.w_max__reg
+			h1 Please enable JavaScript
+			p.h2 Our app won't work without it!
+
 		block body
 		block extra_scripts
