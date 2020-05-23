@@ -1,6 +1,6 @@
 <template lang="pug">
 	app-page
-		.container.dsp__flex.pad__sml.w_max__reg
+		.container.flx_aln_y__center.pad__sml.w_max__reg
 			.w__half
 				h1.mrg_b__lrg New password
 
