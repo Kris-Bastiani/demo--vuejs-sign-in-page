@@ -1,0 +1,24 @@
+input {
+	display: block;
+	border: 0;
+}
+
+input:not([type='submit']) {
+	border-bottom: 2px solid $clr__mono_light;
+	padding: 0.5rem 0.2rem;
+	width: 100%;
+	max-width: 35rem;
+	font: $fnt_w__reg 1rem/1.4 $fnt_f__primary;
+}
+
+input[type='submit'] {
+	border-radius: 0.5rem;
+	padding: 0.5rem 1.5rem;
+	font: $fnt_w__bold 1.5rem/1.4 $fnt_f__primary;
+	background: $clr__primary;
+	color: $clr__white;
+
+	&:not(:disabled) { cursor: pointer; }
+
+	&:disabled { background: $clr__mono_light; }
+}
