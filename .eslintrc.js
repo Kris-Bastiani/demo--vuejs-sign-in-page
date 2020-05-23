@@ -5,7 +5,7 @@ module.exports = {
 	},
 	extends: [
 		'airbnb-base',
-		'plugin:vue/recommended',
+		'plugin:vue/essential',
 		'plugin:security/recommended',
 	],
 	globals: {
@@ -35,6 +35,7 @@ module.exports = {
 		'import/no-extraneous-dependencies': ['error', { devDependencies: true }],
 		indent: ['error', 'tab'],
 		'jsx-quotes': ['error', 'prefer-single'],
+		'max-len': 0,
 		'no-mixed-operators': [
 			'error',
 			{
