@@ -1,4 +1,13 @@
 h1,
+h2,
+.h1,
+.h2 {
+	display: block;
+	color: $clr__mono_dark;
+	text-decoration: none;
+}
+
+h1,
 .h1 { font: $fnt_w__reg 5.3rem/1.2 $fnt_f__primary; }
 
 h2,
