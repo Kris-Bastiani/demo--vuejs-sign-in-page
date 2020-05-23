@@ -2,7 +2,7 @@
 	app-page
 		.container.dsp__flex.pad__sml.w_max__reg
 			.w__half
-				h1 Sign In
+				h1.mrg_b__lrg Sign In
 
 				login-form
 
