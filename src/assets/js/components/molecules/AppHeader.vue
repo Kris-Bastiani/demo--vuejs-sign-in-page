@@ -1,5 +1,5 @@
 <template lang="pug">
-	header.header.container.w_max__lrg
+	header.app_header.container.w_max__lrg
 		a.logo(href='https://www.frankiefinancial.com/')
 			img(src='/assets/images/logo.png', alt='Logo: Frankie')
 
@@ -15,24 +15,3 @@ export default {
 	components: { UserMenu },
 };
 </script>
-
-<style lang="scss">
-	.header {
-		align-items: center;
-		display: flex;
-		justify-content: space-between;
-		margin: 0 auto 5rem;
-		padding: 1rem;
-
-		.logo {
-			&,
-			> img { display: block; }
-
-			> img { max-width: 13.5rem; }
-
-			@media (max-width: 680px) {
-				> img { max-width: 8rem; }
-			}
-		}
-	}
-</style>
