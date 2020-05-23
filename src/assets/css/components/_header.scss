@@ -1,0 +1,14 @@
+header {
+	display: flex;
+	justify-content: space-between;
+	margin: 0 auto;
+	padding: 1rem;
+	max-width: 122rem;
+}
+
+.logo {
+	&,
+	> img { display: block; }
+
+	> img { max-width: 13.5rem; }
+}
