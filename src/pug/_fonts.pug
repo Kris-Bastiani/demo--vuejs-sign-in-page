@@ -1,0 +1,21 @@
+//- Performant loading for Google Fonts
+//- Technique developed by Harry Roberts of CSS Wizardry
+//- SRC: https://csswizardry.com/2020/05/the-fastest-google-fonts/?syn#google-fonts-async-snippet
+
+- const $fontUrl = 'https://fonts.googleapis.com/css2?family=Mukta+Mahee:wght@300;600&display=swap';
+
+//- Preemptively warm up the fonts’ origin.
+link(rel='preconnect', href='https://fonts.gstatic.com', crossorigin)
+
+//- Initiate a high-priority, asynchronous fetch for the CSS file. Works in most modern browsers.
+link(rel='preload', as='style', href!=$fontUrl)
+
+//- Initiate a low-priority, asynchronous fetch that gets applied to the page only after it’s arrived.
+//- Works in all browsers with JavaScript enabled.
+link(rel='stylesheet', href!=$fontUrl, media='print', onload="this.media='all'")
+
+//- In the unlikely event that a visitor has intentionally disabled JavaScript,
+//- fall back to the original method. The good news is that,
+//- although this is a render-blocking request, it can still make use of the preconnect
+//- which makes it marginally faster than the default.
+noscript: link(rel='stylesheet', href!=$fontUrl)
