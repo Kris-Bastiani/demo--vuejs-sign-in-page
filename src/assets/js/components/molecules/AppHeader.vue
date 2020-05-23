@@ -3,9 +3,18 @@
 		a.logo(href='https://www.frankiefinancial.com/')
 			img(src='/assets/images/logo.png', alt='Logo: Frankie')
 
-		div
+		.dsp__flex
 			a.h2(href='https://www.frankiefinancial.com/') About Frankie
+			user-menu.mrg_l__sml
 </template>
+
+<script>
+import UserMenu from '../atoms/UserMenu.vue';
+
+export default {
+	components: { UserMenu },
+};
+</script>
 
 <style lang="scss">
 	.header {
