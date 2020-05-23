@@ -1,10 +1,12 @@
 import Vue from 'vue';
 
+import NewPasswordPage from './components/organisms/NewPasswordPage.vue';
 import NotFoundPage from './components/organisms/NotFoundPage.vue';
 import SignInPage from './components/organisms/SignInPage.vue';
 
 const ROUTES = {
 	'/': SignInPage,
+	'/new-password.html': NewPasswordPage,
 };
 
 const App = new Vue({
