@@ -3,10 +3,18 @@ extends pug/__layout.pug
 block variables
 	-
 		const $meta = {
-			title: 'Kris Bastiani | Frankie Financial tech test',
+			title: 'Sign In | Frankie',
 			desc: 'A coding challenge provided by Frankie Financial'
 		};
 
 block body
 	main#js__app
 		include pug/_header.pug
+
+		.dsp__flex
+			.half
+				h1 Sign In
+
+				//- Login Form
+
+			.half: img(src='/assets/images/login.png', alt='')
