@@ -5,11 +5,11 @@
 </template>
 
 <script>
-import AppIcon from '../atoms/AppIcon.vue';
+import AppIcon from './AppIcon.vue';
 
 export default {
 	components: { AppIcon },
-}
+};
 </script>
 
 <style lang="scss">

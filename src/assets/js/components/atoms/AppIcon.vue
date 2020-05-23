@@ -10,15 +10,15 @@ export default {
 	computed: {
 		viewBox() {
 			switch (this.type) {
-				case 'chevron':
-					return '0 0 448 512';
-				case 'crossCircle':
-					return '0 0 512 512';
-				default:
-					return '0 0 0 0';
+			case 'chevron':
+				return '0 0 448 512';
+			case 'crossCircle':
+				return '0 0 512 512';
+			default:
+				return '0 0 0 0';
 			}
 		},
 	},
 	props: { type: String },
-}
+};
 </script>

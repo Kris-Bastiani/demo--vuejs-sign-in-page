@@ -9,5 +9,5 @@ import AppPage from '../molecules/AppPage.vue';
 
 export default {
 	components: { AppPage },
-}
+};
 </script>
