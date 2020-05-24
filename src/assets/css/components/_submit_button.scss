@@ -1,0 +1,40 @@
+.submit_button {
+	align-items: center;
+	display: flex;
+
+	.ellipsis {
+		margin-left: 3rem;
+
+		&,
+		&::before,
+		&::after {
+			position: relative;
+			display: inline-block;
+			border-radius: 50%;
+			width: 0.2rem;
+			height: 0.2rem;
+			background: $clr__white;
+		}
+
+		&::before,
+		&::after {
+			position: absolute;
+			content: '';
+		}
+
+		&::before {
+			right: 0.5rem;
+			opacity: 50%;
+		}
+
+		&::after {
+			right: 1rem;
+			opacity: 30%;
+		}
+	}
+
+	.icon {
+		width: 0.8rem;
+		transform: rotate(-90deg);
+	}
+}

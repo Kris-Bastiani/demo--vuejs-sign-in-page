@@ -6,13 +6,17 @@
 
 		a.dsp__block.mrg_b__lrg(href='/new-password.pug') Want to reset your password?
 
-		input(type='submit', value='Login')
+		submit-button(label='Login')
 </template>
 
 <script>
 import InputField from '../atoms/InputField.vue';
+import SubmitButton from './SubmitButton.vue';
 
 export default {
-	components: { InputField },
+	components: {
+		InputField,
+		SubmitButton,
+	},
 };
 </script>

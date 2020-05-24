@@ -4,13 +4,17 @@
 
 		input-field.mrg_b__lrg(label='Confirm password:', placeholder='Confirm new password', type='password')
 
-		input(type='submit', value='Save')
+		submit-button(label='Save')
 </template>
 
 <script>
 import InputField from '../atoms/InputField.vue';
+import SubmitButton from './SubmitButton.vue';
 
 export default {
-	components: { InputField },
+	components: {
+		InputField,
+		SubmitButton,
+	},
 };
 </script>
