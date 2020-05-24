@@ -8,4 +8,8 @@
 		margin: 0 0 1.2rem;
 		font-weight: $fnt_w__bold;
 	}
+
+	&._invalid {
+		input { border-bottom-color: $clr__neg; }
+	}
 }
