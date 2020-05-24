@@ -11,6 +11,7 @@ input:not([type='submit']) {
 	font: $fnt_w__reg 1rem/1.4 $fnt_f__primary;
 }
 
+button,
 input[type='submit'] {
 	border-radius: 0.5rem;
 	padding: 0.5rem 1.5rem;
