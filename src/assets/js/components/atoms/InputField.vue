@@ -12,8 +12,8 @@ export default {
 			const vm = this;
 			return {
 				...this.$listeners,
-				blur() { vm.$emit('blur'); },
-				focus() { vm.$emit('focus'); },
+				blur(e) { vm.$emit('blur', e); },
+				focus(e) { vm.$emit('focus', e); },
 				input(e) { vm.$emit('input', e.target.value); },
 			};
 		},
