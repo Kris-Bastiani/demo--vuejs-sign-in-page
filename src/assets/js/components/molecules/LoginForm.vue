@@ -1,8 +1,8 @@
 <template lang="pug">
 	form(title='login form', @submit='e => signIn(e)')
-		input-field(label='Email:', placeholder='Enter email', type='email' v-model='email')
+		input-field(label='Email:', placeholder='Enter email', type='email', required, v-model='email')
 
-		input-field(label='Password:', placeholder='Enter password', type='password' v-model='password')
+		input-field(label='Password:', placeholder='Enter password', type='password', required, v-model='password')
 
 		a.dsp__block.mrg_b__lrg(href='/new-password.pug') Want to reset your password?
 

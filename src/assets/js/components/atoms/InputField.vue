@@ -1,7 +1,7 @@
 <template lang="pug">
 	label.input_field(:class='{ _invalid: error }')
 		span.input_field__label {{ label }}
-		input(:placeholder='placeholder', :type='type', :value='value', v-on='inputListeners')
+		input(:placeholder='placeholder', :type='type', :required='required', :value='value', v-on='inputListeners')
 		.input_field__error(v-if='error') {{ error }}
 </template>
 
@@ -22,6 +22,7 @@ export default {
 		error: String,
 		label: String,
 		placeholder: String,
+		required: Boolean,
 		type: String,
 		value: String,
 	},
