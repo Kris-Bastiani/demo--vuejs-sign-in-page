@@ -132,6 +132,7 @@ module.exports = {
 			'declarations',
 			'rules',
 			{ type: 'at-rule', hasBlock: true },
+			{ type: 'at-rule', hasBlock: false, name: 'return' },
 		],
 		'order/properties-order': [
 			[
