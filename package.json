@@ -37,6 +37,7 @@
 	},
 	"dependencies": {
 		"components": "^0.1.0",
+		"regenerator-runtime": "^0.13.5",
 		"vue": "^2.6.11"
 	},
 	"engines": {

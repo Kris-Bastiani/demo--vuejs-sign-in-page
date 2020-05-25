@@ -1,3 +1,5 @@
+import 'regenerator-runtime/runtime';
+
 import Vue from 'vue';
 
 import NewPasswordPage from './components/organisms/NewPasswordPage.vue';
