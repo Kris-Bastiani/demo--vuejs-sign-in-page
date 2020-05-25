@@ -11,7 +11,7 @@
 
 		> img { max-width: 13.5rem; }
 
-		@media (max-width: 680px) {
+		@include bp_w__below_680 {
 			> img { max-width: 8rem; }
 		}
 	}

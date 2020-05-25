@@ -1,6 +1,7 @@
 @charset 'utf-8';
 
 @import 'variables';
+@import 'mixins/breakpoints';
 @import 'layout';
 @import 'base/forms';
 @import 'base/media';
