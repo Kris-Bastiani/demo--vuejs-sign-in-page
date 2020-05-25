@@ -3,3 +3,7 @@ $types: 'block', 'flex';
 @each $type in $types {
 	.dsp__#{$type} { display: #{$type} !important; }
 }
+
+@include bp_w__below_680 {
+	.dsp__none__below_680 { display: none !important; }
+}

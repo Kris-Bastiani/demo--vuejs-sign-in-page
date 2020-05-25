@@ -6,7 +6,7 @@
 
 				login-form
 
-			img.w__half(src='/assets/images/login.png', alt='')
+			img.dsp__none__below_680.w__half(src='/assets/images/login.png', alt='')
 </template>
 
 <script>

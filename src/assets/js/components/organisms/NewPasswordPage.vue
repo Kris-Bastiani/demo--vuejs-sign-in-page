@@ -6,7 +6,7 @@
 
 				new-password-form
 
-			img.w__half(src='/assets/images/reset_pwd.png', alt='')
+			img.dsp__none__below_680.w__half(src='/assets/images/reset_pwd.png', alt='')
 </template>
 
 <script>
