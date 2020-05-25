@@ -1,5 +1,5 @@
 <template lang="pug">
-	form
+	form(title='login form')
 		input-field(label='Email:', placeholder='Enter email', type='email')
 
 		input-field(label='Password:', placeholder='Enter password', type='password')

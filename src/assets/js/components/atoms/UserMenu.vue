@@ -1,7 +1,7 @@
 <template lang="pug">
 	button.user_menu
-		img.avatar(src='/assets/images/avatar.png', alt='User Avatar')
-		app-icon(type='chevron')
+		img.avatar(src='/assets/images/avatar.png', alt='User Menu')
+		app-icon(type='chevron', role='presentation')
 </template>
 
 <script>
