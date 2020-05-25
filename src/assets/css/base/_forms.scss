@@ -2,6 +2,8 @@ button,
 input {
 	display: block;
 	border: 0;
+	font: $fnt_w__reg 1rem/1.4 $fnt_f__primary;
+	background: none;
 }
 
 input:not([type='submit']) {
@@ -10,18 +12,9 @@ input:not([type='submit']) {
 	padding: 0.5rem 0.2rem;
 	width: 100%;
 	max-width: 35rem;
-	font: $fnt_w__reg 1rem/1.4 $fnt_f__primary;
 }
 
 button,
 input[type='submit'] {
-	border-radius: 0.5rem;
-	padding: 0.5rem 1.5rem;
-	font: $fnt_w__bold 1.5rem/1.4 $fnt_f__primary;
-	background: $clr__primary;
-	color: $clr__white;
-
 	&:not(:disabled) { cursor: pointer; }
-
-	&:disabled { background: $clr__mono_light; }
 }

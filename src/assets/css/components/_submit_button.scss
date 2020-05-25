@@ -1,6 +1,11 @@
 .submit_button {
 	align-items: center;
 	display: flex;
+	border-radius: 0.5rem;
+	padding: 0.5rem 1.5rem;
+	font: $fnt_w__bold 1.5rem/1.4 $fnt_f__primary;
+	background: $clr__primary;
+	color: $clr__white;
 
 	.ellipsis {
 		margin-left: 3rem;
@@ -37,4 +42,6 @@
 		width: 0.8rem;
 		transform: rotate(-90deg);
 	}
+
+	&:disabled { background: $clr__mono_light; }
 }
