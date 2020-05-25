@@ -9,7 +9,11 @@ h2,
 }
 
 h1,
-.h1 { font: $fnt_w__reg 5.3rem/1.2 $fnt_f__primary; }
+.h1 {
+	font: $fnt_w__reg 5.3rem/1.2 $fnt_f__primary;
+
+	@include bp_w__below_680 { font-size: 3rem; }
+}
 
 h2,
 .h2 {
