@@ -1,7 +1,7 @@
 <template lang="pug">
 	app-page
 		.container.flx_aln_y__center.pad__sml.w_max__reg
-			.w__half
+			.w__full.w__half__at_above_680
 				h1.mrg_b__lrg New password
 
 				new-password-form

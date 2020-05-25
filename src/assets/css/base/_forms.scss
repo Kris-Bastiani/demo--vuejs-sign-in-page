@@ -5,6 +5,7 @@ input {
 }
 
 input:not([type='submit']) {
+	box-sizing: border-box;
 	border-bottom: 2px solid $clr__mono_light;
 	padding: 0.5rem 0.2rem;
 	width: 100%;

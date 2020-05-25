@@ -1,4 +1,9 @@
+.w__full { width: 100% !important; }
 .w__half { width: 50% !important; }
 
 .w_max__lrg { max-width: 122rem !important; }
 .w_max__reg { max-width: 115rem !important; }
+
+@include bp_w__at_above_680 {
+	.w__half__at_above_680 { width: 50% !important; }
+}
