@@ -9,6 +9,7 @@ const ROUTES = {
 	'/new-password.html': NewPasswordPage,
 };
 
+// eslint-disable-next-line no-unused-vars
 const App = new Vue({
 	computed: {
 		CurrentPage() { return ROUTES[this.currentRoute] || NotFoundPage; },
@@ -17,5 +18,3 @@ const App = new Vue({
 	el: '#js__app',
 	render(createElement) { return createElement(this.CurrentPage); },
 });
-
-App();
