@@ -3,9 +3,9 @@
 		a.logo(href='https://www.frankiefinancial.com/')
 			img(src='/assets/images/logo.png', alt='Logo: Frankie')
 
-		.dsp__flex
-			a.h2(href='https://www.frankiefinancial.com/') About Frankie
-			user-menu.mrg_l__sml
+		.flx_aln_y__center
+			a.h2.dsp__none__below_480(href='https://www.frankiefinancial.com/') About Frankie
+			user-menu.mrg_l__lrg
 </template>
 
 <script>

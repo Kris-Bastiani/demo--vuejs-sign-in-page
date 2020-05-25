@@ -7,3 +7,7 @@ $types: 'block', 'flex';
 @include bp_w__below_680 {
 	.dsp__none__below_680 { display: none !important; }
 }
+
+@include bp_w__below_480 {
+	.dsp__none__below_480 { display: none !important; }
+}

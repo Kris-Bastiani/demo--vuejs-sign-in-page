@@ -5,3 +5,11 @@
 @mixin bp_w__below_680 {
 	@media (max-width: 679px) { @content; }
 }
+
+@mixin bp_w__at_above_480 {
+	@media (min-width: 480px) { @content; }
+}
+
+@mixin bp_w__below_480 {
+	@media (max-width: 479px) { @content; }
+}
