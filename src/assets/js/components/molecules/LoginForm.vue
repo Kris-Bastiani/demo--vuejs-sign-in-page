@@ -20,7 +20,7 @@
 			:error='password.error',
 		)
 
-		a.dsp__block.mrg_b__lrg(href='/new-password.pug') Want to reset your password?
+		a.dsp__inline-block.mrg_b__lrg(href='/new-password.pug') Want to reset your password?
 
 		submit-button(label='Login')
 </template>

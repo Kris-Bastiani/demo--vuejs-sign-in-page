@@ -1,4 +1,4 @@
-$types: 'block', 'flex';
+$types: 'block', 'flex', 'inline-block';
 
 @each $type in $types {
 	.dsp__#{$type} { display: #{$type} !important; }
