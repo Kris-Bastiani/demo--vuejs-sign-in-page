@@ -96,5 +96,6 @@ export default {
 			window.location = '/signed-in.html';
 		},
 	},
+	created() { if (this.$root.$data.currentUser) window.location = '/signed-in.html'; },
 };
 </script>
