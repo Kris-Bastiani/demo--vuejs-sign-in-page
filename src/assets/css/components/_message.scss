@@ -1,0 +1,21 @@
+.message {
+	&::before {
+		display: inline-block;
+		margin-right: 0.5rem;
+		width: 0.8rem;
+		height: 0.8rem;
+		content: '';
+	}
+
+	&._error {
+		color: $clr__neg;
+
+		&::before { background: url("#{inline_svg('cross_circle', $clr__neg)}") no-repeat center/contain; }
+	}
+
+	&._success {
+		color: $clr__pos;
+
+		&::before { background: url("#{inline_svg('check_circle', $clr__pos)}") no-repeat center/contain; }
+	}
+}

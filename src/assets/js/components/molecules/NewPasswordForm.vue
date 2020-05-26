@@ -1,6 +1,6 @@
 <template lang="pug">
 	form(title='new password form', @submit='e => onSubmit(e)')
-		p(v-show='isSuccessful') Your password was successfully changed.
+		p.message._success(v-show='isSuccessful') Your password was successfully changed.
 
 		input-field(
 			label='New password:',

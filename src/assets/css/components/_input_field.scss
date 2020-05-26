@@ -3,20 +3,6 @@
 	margin: 0 0 2rem;
 	font-size: 1.2rem;
 
-	.input_field__error {
-		margin-top: 0.5rem;
-		color: $clr__neg;
-
-		&::before {
-			display: inline-block;
-			margin-right: 0.5rem;
-			width: 0.8rem;
-			height: 0.8rem;
-			background: url("#{inline_svg('cross_circle', $clr__neg)}") no-repeat center/contain;
-			content: '';
-		}
-	}
-
 	.input_field__label {
 		display: block;
 		margin: 0 0 1.2rem;
