@@ -1,5 +1,7 @@
 <template lang="pug">
-	form(title='new password form')
+	form(title='new password form', @submit='e => onSubmit(e)')
+		p(v-show='isSuccessful') Your password was successfully changed.
+
 		input-field(
 			label='New password:',
 			placeholder='Enter new password',
@@ -24,6 +26,7 @@
 </template>
 
 <script>
+import postData from '../../helpers/postData';
 import validateInput from '../../helpers/validateInput';
 import InputField from '../atoms/InputField.vue';
 import SubmitButton from './SubmitButton.vue';
@@ -34,9 +37,14 @@ export default {
 		SubmitButton,
 	},
 	computed: {
-		canSubmit() { return !(this.password.value.length && this.confirmPassword.value.length); },
+		canSubmit() {
+			const password = this.password.value;
+			const confirmPassword = this.confirmPassword.value;
+			return !(password.length && password === confirmPassword);
+		},
 	},
 	data: () => ({
+		email: 'eve.holt@reqres.in',
 		password: {
 			error: null,
 			value: '',
@@ -46,6 +54,7 @@ export default {
 			value: '',
 		},
 		inProgress: false,
+		isSuccessful: false,
 	}),
 	methods: {
 		onInputBlur(e, field) {
@@ -55,6 +64,27 @@ export default {
 				this.confirmPassword.error = 'These fields need to match.';
 			}
 		},
+		onSubmit(e) {
+			e.preventDefault();
+			this.inProgress = true;
+			this.isSuccessful = false;
+
+			const credentials = {
+				email: this.email,
+				password: this.password.value,
+			};
+
+			postData('https://reqres.in/api/register', credentials)
+				.then(() => { this.isSuccessful = true; })
+				.catch(() => {
+					this.password.error = 'There was a problem changing your password. Please try again later.';
+				})
+				.finally(() => { this.inProgress = false; });
+		},
+	},
+	created() {
+		const { currentUser } = this.$root.$data;
+		if (currentUser) this.email = currentUser.email;
 	},
 };
 </script>
