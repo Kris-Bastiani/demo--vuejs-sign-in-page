@@ -1,6 +1,6 @@
 import 'regenerator-runtime/runtime';
-
 import Vue from 'vue';
+import vClickOutside from 'v-click-outside';
 
 import NewPasswordPage from './components/organisms/NewPasswordPage.vue';
 import NotFoundPage from './components/organisms/NotFoundPage.vue';
@@ -12,6 +12,8 @@ const ROUTES = {
 	'/new-password.html': NewPasswordPage,
 	'/signed-in.html': SignedInPage,
 };
+
+Vue.use(vClickOutside);
 
 // eslint-disable-next-line no-unused-vars
 const App = new Vue({
