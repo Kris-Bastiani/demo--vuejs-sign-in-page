@@ -69,12 +69,25 @@ export default {
 		onSubmit(e) {
 			e.preventDefault();
 
-			postData('https://reqres.in/api/login', {
+			const credentials = {
 				email: this.email.value,
 				password: this.password.value,
-			})
-				.then(data => (data.error ? this.handleResponseError(data.error) : console.log(data)))
+			};
+
+			postData('https://reqres.in/api/login', credentials)
+				.then(data => {
+					if (data.error) return this.handleResponseError(data.error);
+					const userData = {
+						email: credentials.email,
+						token: data.token,
+					};
+					return this.signIn(userData);
+				})
 				.catch(console.error);
+		},
+		signIn(userData) {
+			window.localStorage.setItem('user', JSON.stringify(userData));
+			window.location = '/signed-in.html';
 		},
 	},
 };
