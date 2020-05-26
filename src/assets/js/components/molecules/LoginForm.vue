@@ -62,6 +62,9 @@ export default {
 			case 'user not found':
 				this.email.error = "This user doesn't exist.";
 				break;
+			case 'connection error':
+				this.email.error = 'There was a problem signing in. Please try again later.';
+				break;
 			default:
 				break;
 			}
@@ -88,7 +91,7 @@ export default {
 					};
 					return this.signIn(userData);
 				})
-				.catch(console.error)
+				.catch(() => this.handleResponseError('connection error'))
 				.finally(() => { this.inProgress = false; });
 		},
 		signIn(userData) {
