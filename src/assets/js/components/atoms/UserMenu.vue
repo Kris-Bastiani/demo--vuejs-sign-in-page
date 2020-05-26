@@ -7,20 +7,23 @@
 </template>
 
 <script>
+import signOut from '../../helpers/signOut';
 import AppIcon from './AppIcon.vue';
 
 export default {
 	components: { AppIcon },
-	data: () => ({
-		currentUser: null,
-		isOpen: false,
-	}),
+	data() {
+		return {
+			currentUser: this.$root.$data.currentUser,
+			isOpen: false,
+		};
+	},
 	methods: {
 		signInOrOut() {
 			if (!this.currentUser) {
 				window.location = '/';
 			} else {
-				console.log('Signing out...');
+				signOut();
 			}
 		},
 		toggleIsOpen() { this.isOpen = !this.isOpen; },

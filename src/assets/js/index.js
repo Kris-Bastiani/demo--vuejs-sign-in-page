@@ -18,7 +18,10 @@ const App = new Vue({
 	computed: {
 		CurrentPage() { return ROUTES[this.currentRoute] || NotFoundPage; },
 	},
-	data: { currentRoute: window.location.pathname },
+	data: {
+		currentRoute: window.location.pathname,
+		currentUser: JSON.parse(window.localStorage.getItem('user')),
+	},
 	el: '#js__app',
-	render(createElement) { return createElement(this.CurrentPage); },
+	render(createElement) { return createElement(this.CurrentPage, { props: { currentUser: this.currentUser } }); },
 });
