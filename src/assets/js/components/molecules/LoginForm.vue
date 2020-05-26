@@ -22,7 +22,7 @@
 
 		a.dsp__inline-block.mrg_b__lrg(href='/new-password.pug') Want to reset your password?
 
-		submit-button(label='Login')
+		submit-button(label='Login', :class='{ _in_progress: inProgress }', :disabled='canSubmit')
 </template>
 
 <script>
@@ -36,6 +36,9 @@ export default {
 		InputField,
 		SubmitButton,
 	},
+	computed: {
+		canSubmit() { return !(this.email.value.length && this.password.value.length); },
+	},
 	data: () => ({
 		email: {
 			error: null,
@@ -45,6 +48,7 @@ export default {
 			error: null,
 			value: '',
 		},
+		inProgress: false,
 	}),
 	methods: {
 		handleResponseError(error) {
@@ -68,6 +72,7 @@ export default {
 		},
 		onSubmit(e) {
 			e.preventDefault();
+			this.inProgress = true;
 
 			const credentials = {
 				email: this.email.value,
@@ -83,7 +88,8 @@ export default {
 					};
 					return this.signIn(userData);
 				})
-				.catch(console.error);
+				.catch(console.error)
+				.finally(() => { this.inProgress = false; });
 		},
 		signIn(userData) {
 			window.localStorage.setItem('user', JSON.stringify(userData));
