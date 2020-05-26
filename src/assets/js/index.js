@@ -5,10 +5,12 @@ import Vue from 'vue';
 import NewPasswordPage from './components/organisms/NewPasswordPage.vue';
 import NotFoundPage from './components/organisms/NotFoundPage.vue';
 import SignInPage from './components/organisms/SignInPage.vue';
+import SignedInPage from './components/organisms/SignedInPage.vue';
 
 const ROUTES = {
 	'/': SignInPage,
 	'/new-password.html': NewPasswordPage,
+	'/signed-in.html': SignedInPage,
 };
 
 // eslint-disable-next-line no-unused-vars
