@@ -1,28 +1,30 @@
 <template lang="pug">
-	form(title='login form', @submit='e => onSubmit(e)')
-		input-field(
-			label='Email:',
-			placeholder='Enter email',
-			type='email',
-			required,
-			v-model='email.value',
-			@blur="e => onInputBlur(e, 'email')",
-			:error='email.error',
-		)
+	div
+		p.message._success(v-show='signedIn') You have signed in successfully.
+		form(title='login form', v-show='!signedIn', @submit='e => onSubmit(e)')
+			input-field(
+				label='Email:',
+				placeholder='Enter email',
+				type='email',
+				required,
+				v-model='email.value',
+				@blur="e => onInputBlur(e, 'email')",
+				:error='email.error',
+			)
 
-		input-field(
-			label='Password:',
-			placeholder='Enter password',
-			type='password',
-			required,
-			v-model='password.value',
-			@blur="e => onInputBlur(e, 'password')",
-			:error='password.error',
-		)
+			input-field(
+				label='Password:',
+				placeholder='Enter password',
+				type='password',
+				required,
+				v-model='password.value',
+				@blur="e => onInputBlur(e, 'password')",
+				:error='password.error',
+			)
 
-		a.dsp__inline-block.mrg_b__lrg(href='/new-password.pug') Want to reset your password?
+			a.dsp__inline-block.mrg_b__lrg(href='/new-password.pug') Want to reset your password?
 
-		submit-button(label='Login', :class='{ _in_progress: inProgress }', :disabled='canSubmit')
+			submit-button(label='Login', :class='{ _in_progress: inProgress }', :disabled='canSubmit')
 </template>
 
 <script>
@@ -49,6 +51,7 @@ export default {
 			value: '',
 		},
 		inProgress: false,
+		signedIn: false,
 	}),
 	methods: {
 		handleResponseError(error) {
@@ -96,9 +99,9 @@ export default {
 		},
 		signIn(userData) {
 			window.localStorage.setItem('user', JSON.stringify(userData));
-			window.location = '/signed-in.html';
+			this.signedIn = true;
 		},
 	},
-	created() { if (this.$root.$data.currentUser) window.location = '/signed-in.html'; },
+	created() { if (this.$root.$data.currentUser) this.signedIn = true; },
 };
 </script>
