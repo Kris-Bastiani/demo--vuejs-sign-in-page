@@ -1,5 +1,5 @@
 <template lang="pug">
-	form(title='login form', @submit='e => signIn(e)')
+	form(title='login form', @submit='e => onSubmit(e)')
 		input-field(
 			label='Email:',
 			placeholder='Enter email',
@@ -47,18 +47,33 @@ export default {
 		},
 	}),
 	methods: {
+		handleResponseError(error) {
+			switch (error) {
+			case 'Missing email or username':
+				this.email.error = 'This field is required.';
+				break;
+			case 'Missing password':
+				this.password.error = 'This field is required.';
+				break;
+			case 'user not found':
+				this.email.error = "This user doesn't exist.";
+				break;
+			default:
+				break;
+			}
+		},
 		onInputBlur(e, field) {
 			// eslint-disable-next-line security/detect-object-injection
 			this[field].error = validateInput(e.target);
 		},
-		signIn(e) {
+		onSubmit(e) {
 			e.preventDefault();
 
 			postData('https://reqres.in/api/login', {
 				email: this.email.value,
 				password: this.password.value,
 			})
-				.then(data => console.log('Success:', data))
+				.then(data => (data.error ? this.handleResponseError(data.error) : console.log(data)))
 				.catch(console.error);
 		},
 	},
