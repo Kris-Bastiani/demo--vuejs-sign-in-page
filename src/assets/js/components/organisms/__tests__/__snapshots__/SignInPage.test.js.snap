@@ -1,0 +1,26 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`SignInPage Matches snapshot 1`] = `
+<app-page-stub>
+  <div
+    class="container flx_aln_y__center pad__sml w_max__reg"
+  >
+    <div
+      class="w__full w__half__at_above_680"
+    >
+      <h1
+        class="mrg_b__lrg"
+      >
+        Sign In
+      </h1>
+      <login-form-stub />
+    </div>
+    <img
+      alt=""
+      class="dsp__none__below_680 w__half"
+      role="presentation"
+      src="/assets/images/login.png"
+    />
+  </div>
+</app-page-stub>
+`;
