@@ -1,0 +1,245 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`InputField Should match snapshot when an error message is provided 1`] = `
+<label
+  class="input_field _invalid"
+>
+  <span
+    class="input_field__label"
+  >
+    text
+  </span>
+  <input
+    type="text"
+  />
+  <p
+    class="message _error"
+  >
+    This is an error message.
+  </p>
+</label>
+`;
+
+exports[`InputField Should match snapshot when type = color 1`] = `
+<label
+  class="input_field"
+>
+  <span
+    class="input_field__label"
+  >
+    color
+  </span>
+  <input
+    type="color"
+  />
+  <!---->
+</label>
+`;
+
+exports[`InputField Should match snapshot when type = date 1`] = `
+<label
+  class="input_field"
+>
+  <span
+    class="input_field__label"
+  >
+    date
+  </span>
+  <input
+    type="date"
+  />
+  <!---->
+</label>
+`;
+
+exports[`InputField Should match snapshot when type = datetime-local 1`] = `
+<label
+  class="input_field"
+>
+  <span
+    class="input_field__label"
+  >
+    datetime-local
+  </span>
+  <input
+    type="datetime-local"
+  />
+  <!---->
+</label>
+`;
+
+exports[`InputField Should match snapshot when type = email 1`] = `
+<label
+  class="input_field"
+>
+  <span
+    class="input_field__label"
+  >
+    email
+  </span>
+  <input
+    type="email"
+  />
+  <!---->
+</label>
+`;
+
+exports[`InputField Should match snapshot when type = file 1`] = `
+<label
+  class="input_field"
+>
+  <span
+    class="input_field__label"
+  >
+    file
+  </span>
+  <input
+    type="file"
+  />
+  <!---->
+</label>
+`;
+
+exports[`InputField Should match snapshot when type = month 1`] = `
+<label
+  class="input_field"
+>
+  <span
+    class="input_field__label"
+  >
+    month
+  </span>
+  <input
+    type="month"
+  />
+  <!---->
+</label>
+`;
+
+exports[`InputField Should match snapshot when type = number 1`] = `
+<label
+  class="input_field"
+>
+  <span
+    class="input_field__label"
+  >
+    number
+  </span>
+  <input
+    type="number"
+  />
+  <!---->
+</label>
+`;
+
+exports[`InputField Should match snapshot when type = password 1`] = `
+<label
+  class="input_field"
+>
+  <span
+    class="input_field__label"
+  >
+    password
+  </span>
+  <input
+    type="password"
+  />
+  <!---->
+</label>
+`;
+
+exports[`InputField Should match snapshot when type = search 1`] = `
+<label
+  class="input_field"
+>
+  <span
+    class="input_field__label"
+  >
+    search
+  </span>
+  <input
+    type="search"
+  />
+  <!---->
+</label>
+`;
+
+exports[`InputField Should match snapshot when type = tel 1`] = `
+<label
+  class="input_field"
+>
+  <span
+    class="input_field__label"
+  >
+    tel
+  </span>
+  <input
+    type="tel"
+  />
+  <!---->
+</label>
+`;
+
+exports[`InputField Should match snapshot when type = text 1`] = `
+<label
+  class="input_field"
+>
+  <span
+    class="input_field__label"
+  >
+    text
+  </span>
+  <input
+    type="text"
+  />
+  <!---->
+</label>
+`;
+
+exports[`InputField Should match snapshot when type = time 1`] = `
+<label
+  class="input_field"
+>
+  <span
+    class="input_field__label"
+  >
+    time
+  </span>
+  <input
+    type="time"
+  />
+  <!---->
+</label>
+`;
+
+exports[`InputField Should match snapshot when type = url 1`] = `
+<label
+  class="input_field"
+>
+  <span
+    class="input_field__label"
+  >
+    url
+  </span>
+  <input
+    type="url"
+  />
+  <!---->
+</label>
+`;
+
+exports[`InputField Should match snapshot when type = week 1`] = `
+<label
+  class="input_field"
+>
+  <span
+    class="input_field__label"
+  >
+    week
+  </span>
+  <input
+    type="week"
+  />
+  <!---->
+</label>
+`;
