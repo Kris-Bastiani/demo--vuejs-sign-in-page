@@ -19,6 +19,11 @@ export default {
 			}
 		},
 	},
-	props: { type: String },
+	props: {
+		type: {
+			required: true,
+			type: String,
+		},
+	},
 };
 </script>
