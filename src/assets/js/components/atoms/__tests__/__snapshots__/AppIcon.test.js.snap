@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`AppIcon Should match snapshot when type =  1`] = `
+exports[`AppIcon Should match snapshot when type = chevron 1`] = `
 <svg
   class="icon"
   viewBox="0 0 448 512"
@@ -14,7 +14,7 @@ exports[`AppIcon Should match snapshot when type =  1`] = `
 </svg>
 `;
 
-exports[`AppIcon Should match snapshot when type =  2`] = `
+exports[`AppIcon Should match snapshot when type = crossCircle 1`] = `
 <svg
   class="icon"
   viewBox="0 0 512 512"
