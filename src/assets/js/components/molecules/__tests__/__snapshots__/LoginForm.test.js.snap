@@ -1,0 +1,41 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`LoginForm Matches snapshot 1`] = `
+<div>
+  <p
+    class="message _success"
+    style="display: none;"
+  >
+    You have signed in successfully.
+  </p>
+  <form
+    title="login form"
+  >
+    <input-field-stub
+      label="Email:"
+      placeholder="Enter email"
+      required="true"
+      type="email"
+      value=""
+    />
+    <input-field-stub
+      label="Password:"
+      placeholder="Enter password"
+      required="true"
+      type="password"
+      value=""
+    />
+    <a
+      class="dsp__inline-block mrg_b__lrg"
+      href="/new-password.pug"
+    >
+      Want to reset your password?
+    </a>
+    <submit-button-stub
+      class=""
+      disabled="true"
+      label="Login"
+    />
+  </form>
+</div>
+`;
