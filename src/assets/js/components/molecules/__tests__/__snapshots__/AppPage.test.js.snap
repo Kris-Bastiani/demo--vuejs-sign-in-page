@@ -1,0 +1,7 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`AppPage Matches snapshot 1`] = `
+<div>
+  <appheader-stub />
+</div>
+`;
