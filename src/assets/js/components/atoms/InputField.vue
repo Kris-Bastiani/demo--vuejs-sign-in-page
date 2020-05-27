@@ -6,6 +6,23 @@
 </template>
 
 <script>
+export const INPUT_TYPES = [
+	'color',
+	'date',
+	'datetime-local',
+	'email',
+	'file',
+	'month',
+	'number',
+	'password',
+	'tel',
+	'text',
+	'time',
+	'url',
+	'week',
+	'search',
+];
+
 export default {
 	computed: {
 		inputListeners() {
@@ -20,10 +37,17 @@ export default {
 	},
 	props: {
 		error: String,
-		label: String,
+		label: {
+			required: true,
+			type: String,
+		},
 		placeholder: String,
 		required: Boolean,
-		type: String,
+		type: {
+			required: true,
+			type: String,
+			validator: prop => INPUT_TYPES.includes(prop),
+		},
 		value: String,
 	},
 };
