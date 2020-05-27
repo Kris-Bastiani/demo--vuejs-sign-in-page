@@ -16,7 +16,10 @@
 		"@typescript-eslint/eslint-plugin": "^2.34.0",
 		"@typescript-eslint/parser": "^2.34.0",
 		"@vue/component-compiler-utils": "^3.1.2",
+		"@vue/test-utils": "^1.0.3",
+		"babel-core": "^7.0.0-bridge.0",
 		"babel-eslint": "^10.1.0",
+		"babel-jest": "^26.0.1",
 		"eslint": "^6.8.0",
 		"eslint-config-airbnb-base": "^14.1.0",
 		"eslint-plugin-flowtype": "^4.7.0",
@@ -25,6 +28,7 @@
 		"eslint-plugin-security": "^1.4.0",
 		"eslint-plugin-vue": "^6.2.2",
 		"jest": "^26.0.1",
+		"jest-serializer-vue": "^2.0.2",
 		"parcel": "^1.12.4",
 		"pug": "^2.0.4",
 		"sass": "^1.26.5",
@@ -33,6 +37,7 @@
 		"stylelint-order": "^4.0.0",
 		"typescript": "^3.9.3",
 		"vue-hot-reload-api": "^2.3.4",
+		"vue-jest": "^3.0.5",
 		"vue-template-compiler": "^2.6.11"
 	},
 	"dependencies": {
@@ -53,6 +58,50 @@
 		]
 	},
 	"jest": {
-		"collectCoverage": true
+		"collectCoverage": true,
+		"collectCoverageFrom": [
+			"src/**/*.{js,vue}",
+			"!**/node_modules/**"
+		],
+		"globals": {
+			"vue-jest": {
+				"babelConfig": {
+					"presets": [
+						[
+							"@babel/preset-env",
+							{
+								"modules": false
+							}
+						]
+					],
+					"env": {
+						"test": {
+							"presets": [
+								[
+									"@babel/preset-env",
+									{
+										"targets": {
+											"node": "current"
+										}
+									}
+								]
+							]
+						}
+					}
+				}
+			}
+		},
+		"moduleFileExtensions": [
+			"js",
+			"json",
+			"vue"
+		],
+		"snapshotSerializers": [
+			"jest-serializer-vue"
+		],
+		"transform": {
+			"^.+\\.js$": "babel-jest",
+			".*\\.(vue)$": "vue-jest"
+		}
 	}
 }
