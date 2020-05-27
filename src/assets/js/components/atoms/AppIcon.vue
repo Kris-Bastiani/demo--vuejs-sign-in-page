@@ -6,6 +6,8 @@
 </template>
 
 <script>
+export const ICON_TYPES = ['chevron', 'crossCircle'];
+
 export default {
 	computed: {
 		viewBox() {
@@ -23,6 +25,7 @@ export default {
 		type: {
 			required: true,
 			type: String,
+			validator: prop => ICON_TYPES.includes(prop),
 		},
 	},
 };

@@ -1,7 +1,5 @@
 import { mount } from '@vue/test-utils';
-import AppIcon from '../AppIcon.vue';
-
-const ICON_TYPES = ['chevron', 'crossCircle'];
+import AppIcon, { ICON_TYPES } from '../AppIcon.vue';
 
 describe('AppIcon', () => {
 	ICON_TYPES.forEach(type => it('Should match snapshot when type = ', () => {
