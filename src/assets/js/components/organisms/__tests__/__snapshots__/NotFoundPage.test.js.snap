@@ -1,0 +1,13 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`NotFoundPage Matches snapshot 1`] = `
+<app-page-stub>
+  <div
+    class="container dsp__flex pad__sml w_max__reg"
+  >
+    <h1>
+      Page not found
+    </h1>
+  </div>
+</app-page-stub>
+`;
