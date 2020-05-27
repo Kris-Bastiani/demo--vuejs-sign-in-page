@@ -28,6 +28,7 @@
 </template>
 
 <script>
+import handleLoginResponseError from '../../helpers/handleLoginResponseError';
 import postData from '../../helpers/postData';
 import validateInput from '../../helpers/validateInput';
 import InputField from '../atoms/InputField.vue';
@@ -54,24 +55,6 @@ export default {
 		signedIn: false,
 	}),
 	methods: {
-		handleResponseError(error) {
-			switch (error) {
-			case 'Missing email or username':
-				this.email.error = 'This field is required.';
-				break;
-			case 'Missing password':
-				this.password.error = 'This field is required.';
-				break;
-			case 'user not found':
-				this.email.error = "This user doesn't exist.";
-				break;
-			case 'connection error':
-				this.email.error = 'There was a problem signing in. Please try again later.';
-				break;
-			default:
-				break;
-			}
-		},
 		onInputBlur(e, field) {
 			// eslint-disable-next-line security/detect-object-injection
 			this[field].error = validateInput(e.target);
@@ -87,14 +70,22 @@ export default {
 
 			postData('https://reqres.in/api/login', credentials)
 				.then(data => {
-					if (data.error) return this.handleResponseError(data.error);
+					if (data.error) {
+						const { message, target } = handleLoginResponseError(data.error);
+						// eslint-disable-next-line security/detect-object-injection
+						this[target].error = message;
+						return null;
+					}
+
 					const userData = {
 						email: credentials.email,
 						token: data.token,
 					};
 					return this.signIn(userData);
 				})
-				.catch(() => this.handleResponseError('connection error'))
+				.catch(() => {
+					this.email.error = 'There was a problem signing in. Please try again later.';
+				})
 				.finally(() => { this.inProgress = false; });
 		},
 		signIn(userData) {
