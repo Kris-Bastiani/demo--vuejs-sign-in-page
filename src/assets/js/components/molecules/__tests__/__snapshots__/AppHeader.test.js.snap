@@ -1,0 +1,30 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`AppHeader Matches snapshot 1`] = `
+<header
+  class="app_header container w_max__lrg"
+>
+  <a
+    class="logo"
+    href="https://www.frankiefinancial.com/"
+  >
+    <img
+      alt="Logo: Frankie"
+      src="/assets/images/logo.png"
+    />
+  </a>
+  <div
+    class="flx_aln_y__center"
+  >
+    <a
+      class="h2 dsp__none__below_480"
+      href="https://www.frankiefinancial.com/"
+    >
+      About Frankie
+    </a>
+    <user-menu-stub
+      class="mrg_l__lrg"
+    />
+  </div>
+</header>
+`;
