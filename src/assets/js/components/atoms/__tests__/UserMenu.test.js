@@ -13,7 +13,7 @@ describe('UserMenu', () => {
 	it('Matches snapshot', () => { expect(wrapper.element).toMatchSnapshot(); });
 
 	it('Toggles open state on click', () => {
-		wrapper.find('.user_menu').trigger('click');
+		wrapper.find('.user_menu__button').trigger('click');
 		expect(wrapper.vm.$data.isOpen).toEqual(true);
 	});
 });
