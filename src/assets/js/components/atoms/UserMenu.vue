@@ -1,7 +1,8 @@
 <template lang="pug">
-	button.user_menu(@click='toggleIsOpen()' :class='{ _open: isOpen }', v-click-outside='onClickOutside')
-		img.avatar(src='/assets/images/avatar.png', alt='User Menu')
-		app-icon(type='chevron', role='presentation')
+	.user_menu(:class='{ _open: isOpen }', v-click-outside='onClickOutside')
+		button.user_menu__button(@click='toggleIsOpen()')
+			img.avatar(src='/assets/images/avatar.png', alt='User Menu')
+			app-icon(type='chevron', role='presentation')
 		ul.user_menu__options
 			li: button(@click='signInOrOut()') Sign {{ currentUser ? 'out' : 'in' }}
 </template>
