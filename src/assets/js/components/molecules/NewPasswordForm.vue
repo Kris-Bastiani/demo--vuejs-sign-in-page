@@ -7,6 +7,7 @@
 			placeholder='Enter new password',
 			type='password',
 			required,
+			data-cy='password-input',
 			v-model='password.value',
 			@blur="e => onInputBlur(e, 'password')",
 			:error='password.error',
@@ -17,12 +18,18 @@
 			placeholder='Confirm new password',
 			type='password',
 			required,
+			data-cy='confirm-password-input',
 			v-model='confirmPassword.value',
 			@blur="e => onInputBlur(e, 'confirmPassword')",
 			:error='confirmPassword.error',
 		)
 
-		submit-button(label='Save', :class='{ _in_progress: inProgress }', :disabled='canSubmit')
+		submit-button(
+			label='Save',
+			:class='{ _in_progress: inProgress }',
+			:disabled='canSubmit',
+			data-cy='submit-button',
+		)
 </template>
 
 <script>

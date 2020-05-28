@@ -12,6 +12,7 @@ exports[`LoginForm Matches snapshot 1`] = `
     title="login form"
   >
     <input-field-stub
+      data-cy="email-input"
       label="Email:"
       placeholder="Enter email"
       required="true"
@@ -19,6 +20,7 @@ exports[`LoginForm Matches snapshot 1`] = `
       value=""
     />
     <input-field-stub
+      data-cy="password-input"
       label="Password:"
       placeholder="Enter password"
       required="true"
@@ -27,12 +29,15 @@ exports[`LoginForm Matches snapshot 1`] = `
     />
     <a
       class="dsp__inline-block mrg_b__lrg"
+      data-cy="reset-password-link"
       href="/new-password.pug"
     >
       Want to reset your password?
+
     </a>
     <submit-button-stub
       class=""
+      data-cy="submit-button"
       disabled="true"
       label="Login"
     />

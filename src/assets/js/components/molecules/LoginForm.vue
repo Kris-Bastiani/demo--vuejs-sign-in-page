@@ -7,6 +7,7 @@
 				placeholder='Enter email',
 				type='email',
 				required,
+				data-cy='email-input',
 				v-model='email.value',
 				@blur="e => onInputBlur(e, 'email')",
 				:error='email.error',
@@ -17,14 +18,21 @@
 				placeholder='Enter password',
 				type='password',
 				required,
+				data-cy='password-input',
 				v-model='password.value',
 				@blur="e => onInputBlur(e, 'password')",
 				:error='password.error',
 			)
 
-			a.dsp__inline-block.mrg_b__lrg(href='/new-password.pug') Want to reset your password?
+			a.dsp__inline-block.mrg_b__lrg(href='/new-password.pug', data-cy='reset-password-link').
+				Want to reset your password?
 
-			submit-button(label='Login', :class='{ _in_progress: inProgress }', :disabled='canSubmit')
+			submit-button(
+				label='Login',
+				:class='{ _in_progress: inProgress }',
+				:disabled='canSubmit',
+				data-cy='submit-button',
+			)
 </template>
 
 <script>
