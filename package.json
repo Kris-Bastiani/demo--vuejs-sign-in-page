@@ -1,7 +1,7 @@
 {
-	"name": "test--frankie-financial",
-	"version": "0.1.0",
-	"description": "Technical test for Frankie Financial",
+	"name": "demo--vuejs-sign-in-page",
+	"version": "1.0.0",
+	"description": "A basic sign in page with password reset, built using VueJS",
 	"scripts": {
 		"build": "parcel build src/*.pug",
 		"start": "parcel src/*.pug",
