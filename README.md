@@ -6,7 +6,7 @@ Any HTML is written using PugJS, and CSS is written using SCSS.
 
 To simulate a back-end, I have used [Reqres](https://reqres.in/).
 
-CSS has been written to conform to my personal CSS styleguide, which can be found at [GitHub/OchidAugur/CSS-Styleguide](https://github.com/OrchidAugur/CSS-Styleguide).
+CSS has been written to conform to my personal CSS styleguide, which can be found at [GitHub/OrchidAugur/CSS-Styleguide](https://github.com/OrchidAugur/CSS-Styleguide).
 
 The assets are compiled and bundled with ParcelJS, and testing is handled via Jest and Cypress.
 
