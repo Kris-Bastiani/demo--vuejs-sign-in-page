@@ -91,6 +91,7 @@ export default {
 		signIn(userData) {
 			window.localStorage.setItem('user', JSON.stringify(userData));
 			this.signedIn = true;
+			window.location.reload();
 		},
 	},
 	created() { if (this.$root.$data.currentUser) this.signedIn = true; },
