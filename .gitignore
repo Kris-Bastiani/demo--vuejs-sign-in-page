@@ -11,6 +11,8 @@ npm-debug.log*
 
 # Testing
 coverage/
+cypress/videos/
+cypress/screenshots/
 cypress/fixtures/example.json
 cypress/integration/examples/
 

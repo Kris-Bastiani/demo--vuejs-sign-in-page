@@ -6,7 +6,8 @@
 		"build": "parcel build src/*.pug",
 		"start": "parcel src/*.pug",
 		"test": "jest",
-		"cypress:open": "cypress open"
+		"cypress:open": "cypress open",
+		"cypress:run": "cypress run"
 	},
 	"author": "Kris Bastiani <kris.bastiani@gmail.com>",
 	"license": "ISC",
