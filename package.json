@@ -33,7 +33,7 @@
 		"jest": "^26.0.1",
 		"jest-serializer-vue": "^2.0.2",
 		"parcel": "^1.12.4",
-		"pug": "^2.0.4",
+		"pug": "^3.0.1",
 		"sass": "^1.26.5",
 		"stylelint": "^13.5.0",
 		"stylelint-config-recommended": "^3.0.0",
